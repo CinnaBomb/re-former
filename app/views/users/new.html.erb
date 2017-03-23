@@ -1,0 +1,49 @@
+<%= form_for @user do |f| %>
+Username: <%= f.text_field :username, placeholder: "Choose a username!" %>
+Email: <%= f.email_field :email, placeholder: "example@example.com"%>
+Password: <%= f.password_field :password %>
+<%= f.submit "Submit" %>
+<% end %>
+
+
+
+<!--
+<%= form_tag("/users", method: "post") do %>
+
+	<%= label_tag(:username, "Username:") %>
+	<%= text_field_tag(:username) %>
+
+	<%= label_tag(:email, "Email:") %>
+	<%= email_field_tag(:email) %>
+
+	<%= label_tag(:password, "Password:") %>
+	<%= password_field_tag(:password) %>
+
+	<%= submit_tag("Submit") %>
+
+	<% end %>
+-->
+
+<!--
+<h1>
+This is a new users tab...
+</h1>
+
+<form accept-charset = "UTF-8" method = "POST" action = "/users">
+
+<input type= "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+
+<label for = "username">Username:</label>
+<input type = "text" name = "user[username]">
+
+<label for = "email">Email:</label>
+<input type = "email" name = "user[email]">
+
+<label for = "password">Password:</label>
+<input type = "password" name = "user[password]">
+
+<input type = "submit" name = "submit" value = "Submit">
+
+</form>
+-->
+
